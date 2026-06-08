@@ -836,3 +836,63 @@ margin-top:40px;
 margin-bottom:40px;
 
 }
+
+.contact-card{
+
+background:rgba(255,255,255,.02);
+
+border:1px solid rgba(201,175,140,.15);
+
+border-radius:22px;
+
+padding:25px;
+
+text-decoration:none;
+
+transition:.3s;
+
+color:#F5EFE4;
+
+display:block;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-5px);
+
+border-color:#C9AF8C;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.contact-card h3{
+
+font-family:'Cinzel',serif;
+
+color:#C9AF8C;
+
+margin-bottom:10px;
+
+}
+
+.contact-card p{
+
+line-height:1.8;
+
+color:#F5EFE4;
+
+}
+
+.contact-card span{
+
+display:inline-block;
+
+margin-top:15px;
+
+color:#C9AF8C;
+
+font-weight:600;
+
+}
