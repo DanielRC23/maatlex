@@ -1,4 +1,4 @@
-const CACHE_NAME = "maatlex-v1";
+const CACHE_NAME = "maatlex-v2";
 
 const urlsToCache = [
   "/",
