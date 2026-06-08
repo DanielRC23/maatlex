@@ -877,78 +877,30 @@ margin-bottom:40px;
 
 }
 
+
+
+/* TEST CONTACTO */
+
 .contact-card{
 
-background:rgba(255,255,255,.02);
+display:block !important;
 
-border:1px solid rgba(201,175,140,.15);
+background:red !important;
 
-border-radius:22px;
+color:white !important;
 
-padding:25px;
+padding:30px !important;
 
-text-decoration:none;
+border-radius:20px !important;
 
-transition:.3s;
+margin-bottom:20px !important;
 
-color:#F5EFE4;
-
-}
-
-.contact-card:hover{
-
-transform:translateY(-5px);
-
-border-color:#C9AF8C;
-
-box-shadow:0 10px 30px rgba(0,0,0,.25);
+text-decoration:none !important;
 
 }
 
 .contact-card h3{
 
-font-family:'Cinzel',serif;
-
-color:#C9AF8C;
-
-margin-bottom:10px;
-
-}
-
-.contact-card p{
-
-line-height:1.8;
-
-}
-
-.map-container{
-
-overflow:hidden;
-
-border-radius:22px;
-
-border:1px solid rgba(201,175,140,.15);
-
-}
-
-@media(min-width:900px){
-
-.contact-grid{
-
-grid-template-columns:repeat(3,1fr);
-
-}
-
-}
-
-.contact-card span{
-
-display:inline-block;
-
-margin-top:15px;
-
-color:#C9AF8C;
-
-font-weight:600;
+color:white !important;
 
 }
