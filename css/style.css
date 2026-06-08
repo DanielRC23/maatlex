@@ -901,3 +901,7 @@ color:white !important;
 body{
 outline:10px solid red !important;
 }
+
+.contact-card{
+    background:red !important;
+}
