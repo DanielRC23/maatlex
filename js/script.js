@@ -35,30 +35,3 @@ answer.scrollHeight + "px";
 });
 
 
-let deferredPrompt;
-
-const installBtn =
-document.getElementById('installBtn');
-
-window.addEventListener('beforeinstallprompt', (e) => {
-
-e.preventDefault();
-
-deferredPrompt = e;
-
-installBtn.style.display = 'inline-block';
-
-});
-
-installBtn.addEventListener('click', async () => {
-
-if(!deferredPrompt) return;
-
-deferredPrompt.prompt();
-
-const choice =
-await deferredPrompt.userChoice;
-
-deferredPrompt = null;
-
-});
