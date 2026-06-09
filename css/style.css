@@ -1384,15 +1384,17 @@ display:flex;
 
 justify-content:center;
 
-margin:40px auto;
+margin:60px auto;
 
 }
 
 #installBtn{
 
-display:flex;
+display:inline-flex;
 
 align-items:center;
+
+justify-content:center;
 
 gap:12px;
 
@@ -1434,7 +1436,7 @@ height:22px;
 
 flex-shrink:0;
 
-position:relative center;
+position:relative;
 
 top:-1px;
 
@@ -1447,5 +1449,13 @@ background:rgba(31,122,61,.15);
 border-color:#1F7A3D;
 
 color:#33C759;
+
+}
+
+#installBtn span{
+
+display:flex;
+
+align-items:center;
 
 }
