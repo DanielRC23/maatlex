@@ -1380,25 +1380,37 @@ opacity:.7;
 
 .install-app{
 
-margin-top:25px;
+display:flex;
+
+justify-content:center;
+
+margin:40px auto;
 
 }
 
 #installBtn{
 
-background:rgba(255,255,255,.08);
+display:flex;
 
-border:1px solid rgba(201,175,140,.25);
+align-items:center;
 
-color:#F5EFE4;
+gap:12px;
 
-padding:12px 22px;
+padding:14px 28px;
 
 border-radius:50px;
 
-cursor:pointer;
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(201,175,140,.2);
+
+color:#C9AF8C;
+
+font-size:1rem;
 
 font-weight:600;
+
+cursor:pointer;
 
 backdrop-filter:blur(10px);
 
@@ -1414,10 +1426,20 @@ border-color:#C9AF8C;
 
 }
 
+#installBtn svg{
+
+width:22px;
+
+height:22px;
+
+}
+
 #installBtn.installed{
 
-background:#1F7A3D;
+background:rgba(31,122,61,.15);
 
 border-color:#1F7A3D;
+
+color:#33C759;
 
 }
