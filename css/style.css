@@ -235,7 +235,7 @@ left:50%;
 
 transform:translate(-50%,-50%);
 
-width:700px;
+width:min(700px,70vw);
 
 max-width:80vw;
 
@@ -244,6 +244,18 @@ opacity:.04;
 pointer-events:none;
 
 z-index:1;
+
+}
+
+@media (max-width:768px){
+
+.hero-watermark{
+
+width:280px;
+
+opacity:.03;
+
+}
 
 }
 
@@ -1363,5 +1375,49 @@ width:45px;
 height:auto;
 
 opacity:.7;
+
+}
+
+.install-app{
+
+margin-top:25px;
+
+}
+
+#installBtn{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(201,175,140,.25);
+
+color:#F5EFE4;
+
+padding:12px 22px;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-weight:600;
+
+backdrop-filter:blur(10px);
+
+transition:.3s ease;
+
+}
+
+#installBtn:hover{
+
+transform:translateY(-2px);
+
+border-color:#C9AF8C;
+
+}
+
+#installBtn.installed{
+
+background:#1F7A3D;
+
+border-color:#1F7A3D;
 
 }

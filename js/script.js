@@ -84,3 +84,54 @@ counters.forEach(counter => {
 observer.observe(counter);
 
 });
+
+let deferredPrompt;
+
+const installBtn =
+document.getElementById('installBtn');
+
+window.addEventListener(
+'beforeinstallprompt',
+(e) => {
+
+e.preventDefault();
+
+deferredPrompt = e;
+
+installBtn.style.display = 'inline-block';
+
+});
+
+installBtn.addEventListener(
+'click',
+async () => {
+
+if(!deferredPrompt) return;
+
+deferredPrompt.prompt();
+
+const result =
+await deferredPrompt.userChoice;
+
+if(result.outcome === 'accepted'){
+
+installBtn.textContent =
+'✓ App Instalada';
+
+installBtn.classList.add(
+'installed'
+);
+
+}
+
+deferredPrompt = null;
+
+});
+
+if('serviceWorker' in navigator){
+
+navigator.serviceWorker.register(
+'/sw.js'
+);
+
+}

@@ -1,0 +1,22 @@
+{
+  "name": "MAAT LEX Consultoría Jurídica",
+  "short_name": "MAAT LEX",
+  "description": "Consultoría jurídica especializada en Seguridad Social, Amparo, Migración y Riesgos de Construcción.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F1D19",
+  "theme_color": "#0F1D19",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
