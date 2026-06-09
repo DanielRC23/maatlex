@@ -152,3 +152,66 @@ navigator.serviceWorker.register(
 );
 
 }
+
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+if(isIOS){
+
+installBtn.innerHTML = `
+
+<svg xmlns="http://www.w3.org/2000/svg"
+width="22"
+height="22"
+fill="none"
+viewBox="0 0 24 24"
+stroke="currentColor">
+
+<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M12 16h.01M8 4h8a2 2 0 012 2v12a2 2 0 01-2 2H8a2 2 0 01-2-2V6a2 2 0 012-2z"/>
+
+</svg>
+
+<span>Agregar a Inicio</span>
+
+`;
+
+installBtn.addEventListener('click', () => {
+
+alert(
+'Para instalar MAAT LEX:\n\n1. Presiona Compartir\n2. Selecciona "Agregar a pantalla de inicio"\n3. Presiona Agregar'
+);
+
+});
+
+}
+
+if(
+window.matchMedia('(display-mode: standalone)').matches ||
+window.navigator.standalone
+){
+
+installBtn.innerHTML = `
+
+<svg xmlns="http://www.w3.org/2000/svg"
+width="22"
+height="22"
+fill="none"
+viewBox="0 0 24 24"
+stroke="currentColor">
+
+<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M5 13l4 4L19 7"/>
+
+</svg>
+
+<span>App Instalada</span>
+
+`;
+
+installBtn.classList.add('installed');
+
+}
