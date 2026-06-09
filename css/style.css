@@ -1326,3 +1326,42 @@ font-size:1rem;
 color:#F5EFE4;
 
 }
+
+.section-divider{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:25px;
+
+margin:70px auto 0px;
+
+opacity:.7;
+
+}
+
+.section-divider::before,
+.section-divider::after{
+
+content:"";
+
+width:140px;
+
+height:1px;
+
+background:rgba(201,175,140,.35);
+
+}
+
+.section-divider img{
+
+width:45px;
+
+height:auto;
+
+opacity:.7;
+
+}
