@@ -843,6 +843,16 @@ transform:scale(1.08);
 
 }
 
+.whatsapp-float svg{
+
+width:65px;
+
+height:65px;
+
+display:block;
+
+}
+
 a[href^="tel"]{
 
 color:#C9AF8C;
@@ -1183,5 +1193,25 @@ transform:translateY(-2px);
 *{
 
 -webkit-tap-highlight-color: transparent;
+
+}
+
+.service-card,
+.detail-card,
+.contact-card{
+
+transition:.3s ease;
+
+}
+
+.service-card:hover,
+.detail-card:hover,
+.contact-card:hover{
+
+transform:translateY(-6px);
+
+border-color:#C9AF8C;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
 
 }
