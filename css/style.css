@@ -1179,3 +1179,9 @@ border-color:#C9AF8C;
 transform:translateY(-2px);
 
 }
+
+*{
+
+-webkit-tap-highlight-color: transparent;
+
+}
