@@ -1432,6 +1432,12 @@ width:22px;
 
 height:22px;
 
+flex-shrink:0;
+
+position:relative center;
+
+top:-1px;
+
 }
 
 #installBtn.installed{
