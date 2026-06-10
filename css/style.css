@@ -638,7 +638,7 @@ grid-template-columns:repeat(2,1fr);
 
 .about{
 
-padding:100px 25px; 
+padding:20px 25px; 
 
 max-width:1200px; 
 
@@ -882,7 +882,7 @@ font-weight:600;
 
 .contact-section{
 
-padding:100px 25px;
+padding:70px 25px;
 
 max-width:1200px;
 
@@ -890,6 +890,27 @@ margin:auto;
 
 }
 
+.contact-grid{
+
+display:flex;
+
+justify-content:center;
+
+align-items:stretch;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+max-width:900px;
+
+margin:40px auto;
+
+}
+
+/*ASI ESTABA*/
+
+/*
 .contact-grid{
 
 display:grid;
@@ -902,9 +923,9 @@ margin-top:40px;
 
 margin-bottom:40px;
 
-justify-content:center;
-
 }
+
+*/
 
 .contact-card{
 
@@ -922,7 +943,15 @@ transition:.3s;
 
 color:#F5EFE4;
 
-display:block;
+width:280px;
+
+flex:0 1 300px;
+
+min-height:100px;
+
+max-width:300px;
+
+text-align:center;
 
 }
 
@@ -1464,7 +1493,7 @@ align-items:center;
 
 .locations-section{
 
-padding:100px 25px;
+padding:20px 25px;
 
 max-width:1200px;
 
