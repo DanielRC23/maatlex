@@ -1720,3 +1720,56 @@ line-height:1.6;
 font-size:.95rem;
 
 }
+
+
+.footer-links{
+
+margin-bottom:15px;
+
+}
+
+.footer-links a{
+
+color:#C9AF8C;
+
+text-decoration:none;
+
+font-size:.95rem;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+opacity:.8;
+
+}
+
+.legal-page{
+
+max-width:900px;
+
+margin:120px auto;
+
+padding:0 25px;
+
+line-height:1.9;
+
+}
+
+.legal-page h1{
+
+margin-bottom:30px;
+
+}
+
+.legal-page h2{
+
+margin-top:40px;
+
+margin-bottom:15px;
+
+color:#C9AF8C;
+
+}
