@@ -1849,6 +1849,8 @@ color:#C9AF8C;
   color: #f5ead2;
   text-decoration: none;
   transition: 0.25s ease;
+ min-width: 0;
+  overflow: hidden;
 }
 
 .contact-socials a i {
@@ -1859,4 +1861,68 @@ color:#C9AF8C;
 .contact-socials a:hover {
   transform: translateY(-3px);
   border-color: rgba(214, 181, 109, 0.65);
+}
+
+.contact-socials a span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.navbar,
+.hero,
+section,
+footer {
+  max-width: 100vw;
+}
+
+.menu-toggle {
+  position: relative;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 14px 18px;
+  }
+
+  .nav-links {
+    max-width: 100%;
+  }
+
+  .floating-socials {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .whatsapp-float,
+  .social-options a {
+    width: 50px;
+    height: 50px;
+  }
 }
