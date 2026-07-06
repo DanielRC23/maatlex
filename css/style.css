@@ -1774,67 +1774,89 @@ color:#C9AF8C;
 
 }
 
+/* BOTONES FLOTANTES DE REDES */
 .floating-socials {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 999;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
 }
 
+/* Redes ocultas */
 .social-options {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
   opacity: 0;
-  transform: translateY(15px);
+  transform: translateY(14px);
   pointer-events: none;
   transition: 0.3s ease;
 }
 
-.floating-socials:hover .social-options {
+/* Mostrar redes en PC y celular */
+.floating-socials:hover .social-options,
+.floating-socials.active .social-options {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
+/* Tamaño general de botones */
 .social-options a,
 .whatsapp-float {
-  width: 54px;
-  height: 54px;
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  min-height: 58px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(10, 38, 32, 0.92);
-  color: #d6b56d;
-  font-size: 24px;
+  color: #fff;
+  font-size: 28px;
   text-decoration: none;
-  border: 1px solid rgba(214, 181, 109, 0.45);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  border: none;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
   transition: 0.25s ease;
+}
+
+/* Colores de cada red */
+.social-options a[aria-label="Facebook"] {
+  background: #1877f2;
+}
+
+.social-options a[aria-label="Instagram"] {
+  background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.social-options a[aria-label="YouTube"] {
+  background: #ff0000;
+}
+
+.social-options a[aria-label="TikTok"] {
+  background: #000000;
 }
 
 .whatsapp-float {
   background: #25d366;
-  color: #fff;
-  font-size: 30px;
-  border: none;
+  font-size: 32px;
 }
 
 .social-options a:hover,
 .whatsapp-float:hover {
-  transform: translateY(-3px) scale(1.05);
+  transform: scale(1.07);
 }
 
+/* REDES EN CONTACTO */
 .contact-socials {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
   gap: 14px;
 }
 
@@ -1849,18 +1871,14 @@ color:#C9AF8C;
   color: #f5ead2;
   text-decoration: none;
   transition: 0.25s ease;
- min-width: 0;
+  min-width: 0;
   overflow: hidden;
 }
 
 .contact-socials a i {
   color: #d6b56d;
   font-size: 22px;
-}
-
-.contact-socials a:hover {
-  transform: translateY(-3px);
-  border-color: rgba(214, 181, 109, 0.65);
+  min-width: 24px;
 }
 
 .contact-socials a span {
@@ -1870,12 +1888,32 @@ color:#C9AF8C;
   line-height: 1.2;
 }
 
-.floating-socials.active .social-options {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+.contact-socials a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(214, 181, 109, 0.65);
 }
 
+/* AJUSTE MÓVIL */
+@media (max-width: 768px) {
+  .floating-socials {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .social-options a,
+  .whatsapp-float {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+  }
+
+  .contact-socials {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TERMINA BOTONES FLOTANTES DE REDES */
 
 html,
 body {
