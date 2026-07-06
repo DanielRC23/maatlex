@@ -1913,6 +1913,42 @@ color:#C9AF8C;
   }
 }
 
+.floating-socials {
+  right: 24px !important;
+  bottom: 22px !important;
+  align-items: center !important;
+}
+
+.social-options {
+  width: 64px !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.social-options a,
+.whatsapp-float {
+  width: 64px !important;
+  height: 64px !important;
+  min-width: 64px !important;
+  min-height: 64px !important;
+  max-width: 64px !important;
+  max-height: 64px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+.whatsapp-float {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
 /* TERMINA BOTONES FLOTANTES DE REDES */
 
 html,
