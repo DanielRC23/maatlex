@@ -1870,6 +1870,13 @@ color:#C9AF8C;
   line-height: 1.2;
 }
 
+.floating-socials.active .social-options {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
 html,
 body {
   width: 100%;

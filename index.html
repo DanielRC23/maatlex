@@ -813,7 +813,7 @@ Aviso de Privacidad
 
 <script src="js/script.js"></script>
 
-<div class="floating-socials">
+<div class="floating-socials" id="floatingSocials">
   <div class="social-options">
     <a href="https://www.facebook.com/profile.php?id=61591359361929" target="_blank" aria-label="Facebook">
       <i class="fa-brands fa-facebook-f"></i>
@@ -832,10 +832,47 @@ Aviso de Privacidad
     </a>
   </div>
 
-  <a href="https://wa.me/524439356776" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <a href="https://wa.me/524439356776"
+  target="_blank"
+  class="whatsapp-float"
+  id="whatsappFloat"
+  aria-label="WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 </div>
+
+<script>
+const floatingSocials = document.getElementById("floatingSocials");
+const whatsappFloat = document.getElementById("whatsappFloat");
+
+let menuAbierto = false;
+
+whatsappFloat.addEventListener("click", function (e) {
+
+  // Solo aplica esta lógica en dispositivos táctiles
+  if (window.matchMedia("(hover: none)").matches) {
+
+    if (!menuAbierto) {
+      e.preventDefault();
+
+      floatingSocials.classList.add("active");
+      menuAbierto = true;
+    }
+
+    // Si ya estaba abierto, no hacemos preventDefault
+    // y el segundo toque abre WhatsApp
+  }
+});
+
+document.addEventListener("click", function (e) {
+
+  if (!floatingSocials.contains(e.target)) {
+    floatingSocials.classList.remove("active");
+    menuAbierto = false;
+  }
+
+});
+</script>
 
 </body>
 
