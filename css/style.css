@@ -2007,3 +2007,214 @@ footer {
     height: 50px;
   }
 }
+
+/* ============================= */
+/* TEMA CLARO MAAT LEX */
+/* ============================= */
+
+:root {
+  --maat-bg: #F6F1E7;
+  --maat-bg-alt: #EDE4D3;
+  --maat-card: #FFFDF8;
+  --maat-green: #0B2B24;
+  --maat-green-2: #17483C;
+  --maat-gold: #B9975B;
+  --maat-gold-light: #D5BC8C;
+  --maat-text: #202722;
+  --maat-muted: #626860;
+  --maat-border: #D9CCB6;
+}
+
+/* Fondo general claro */
+body {
+  background: var(--maat-bg) !important;
+  color: var(--maat-text) !important;
+}
+
+/* Navbar y hero se quedan oscuros */
+.navbar,
+.hero,
+footer {
+  background: #081C17 !important;
+  color: #F5EFE4 !important;
+}
+
+/* Menú móvil oscuro */
+#mobile-menu {
+  background: rgba(5, 15, 12, 0.92) !important;
+}
+
+/* Títulos */
+.section-title,
+.service-card h3,
+.team-card h3,
+.why-card h3,
+.resource-card h3,
+.contact-card h3,
+.location-card h3,
+.legal-page h2,
+.counter {
+  color: var(--maat-green) !important;
+}
+
+/* Subtítulos y textos */
+.section-subtitle,
+.service-card p,
+.team-card p,
+.why-card p,
+.resource-card p,
+.contact-card p,
+.location-card p,
+.faq-answer p,
+.section-text,
+.stat-item p {
+  color: var(--maat-muted) !important;
+}
+
+/* Secciones principales claras */
+.services,
+.about,
+.faq-section,
+.contact-section,
+.locations-section,
+.resources-section,
+.info-section,
+.services-detail,
+.cta-section,
+.problems-section,
+.legal-page {
+  background: var(--maat-bg) !important;
+}
+
+/* Sección alterna beige */
+.why-us,
+.stats {
+  background: var(--maat-bg-alt) !important;
+}
+
+/* Tarjetas claras */
+.service-card,
+.team-card,
+.why-card,
+.resource-card,
+.resources-cta,
+.faq-item,
+.contact-card,
+.detail-card,
+.location-card {
+  background: var(--maat-card) !important;
+  border: 1px solid var(--maat-border) !important;
+  color: var(--maat-text) !important;
+  box-shadow: 0 10px 28px rgba(11, 43, 36, 0.07) !important;
+}
+
+/* Hover tarjetas */
+.service-card:hover,
+.team-card:hover,
+.why-card:hover,
+.resource-card:hover,
+.contact-card:hover,
+.detail-card:hover,
+.location-card:hover,
+.faq-item:hover {
+  border-color: var(--maat-gold) !important;
+  box-shadow: 0 15px 35px rgba(11, 43, 36, 0.13) !important;
+}
+
+/* Botones principales verdes */
+.btn-primary,
+.hero-btn {
+  background: var(--maat-green) !important;
+  color: #F6F1E7 !important;
+  border: 1px solid var(--maat-green) !important;
+}
+
+.btn-primary:hover,
+.hero-btn:hover {
+  background: var(--maat-green-2) !important;
+  box-shadow: 0 10px 25px rgba(11, 43, 36, 0.22) !important;
+}
+
+/* Botones secundarios */
+.btn-secondary {
+  background: transparent !important;
+  color: var(--maat-green) !important;
+  border: 1px solid var(--maat-green) !important;
+}
+
+.btn-secondary:hover {
+  background: var(--maat-green) !important;
+  color: #F6F1E7 !important;
+}
+
+/* Links y chips */
+.service-card span,
+.resource-card a,
+.secondary-services-title,
+.secondary-services div,
+.contact-card span,
+.location-card a,
+.footer-links a,
+a[href^="tel"] {
+  color: var(--maat-gold) !important;
+}
+
+.secondary-services a {
+  color: var(--maat-green) !important;
+  border-color: var(--maat-border) !important;
+}
+
+.secondary-services a:hover {
+  border-color: var(--maat-gold) !important;
+}
+
+/* FAQ */
+.faq-question {
+  color: var(--maat-text) !important;
+}
+
+.faq-question span {
+  color: var(--maat-gold) !important;
+}
+
+/* Separadores */
+.section-divider::before,
+.section-divider::after,
+.office-hours,
+.map-container {
+  border-color: var(--maat-border) !important;
+}
+
+/* Contacto redes */
+.contact-socials a {
+  background: var(--maat-card) !important;
+  border: 1px solid var(--maat-border) !important;
+  color: var(--maat-text) !important;
+}
+
+.contact-socials a i {
+  color: var(--maat-gold) !important;
+}
+
+/* Botón instalar app */
+#installBtn {
+  background: var(--maat-card) !important;
+  color: var(--maat-green) !important;
+  border: 1px solid var(--maat-border) !important;
+}
+
+/* Mantener hero oscuro legible */
+.hero h1,
+.hero p,
+.hero .btn-secondary {
+  color: #F5EFE4 !important;
+}
+
+.hero .btn-secondary {
+  border-color: #C9AF8C !important;
+}
+
+.hero .btn-secondary:hover {
+  background: #C9AF8C !important;
+  color: #0F1D19 !important;
+}
