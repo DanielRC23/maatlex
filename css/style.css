@@ -1846,6 +1846,158 @@ height:350px;
 
 }
 
+/* =========================================
+   MAPAS DE UBICACIONES
+========================================= */
+
+.maps-section {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.map-block {
+    margin-bottom: 55px;
+}
+
+.map-block h3 {
+    margin: 0 0 6px;
+
+    text-align: center;
+
+    color: #0b2b24;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.map-block > p {
+    margin: 0 0 22px;
+
+    text-align: center;
+
+    color: #626860;
+
+    font-size: 0.95rem;
+}
+
+.map-block .map-container {
+    margin-top: 0;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .maps-section {
+        margin-top: 40px;
+    }
+
+    .map-block {
+        margin-bottom: 40px;
+    }
+
+    .map-block h3 {
+        font-size: 1.15rem;
+    }
+
+    .map-block > p {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+}
+
+/* =========================================
+   ZONAS DE UBICACIONES
+========================================= */
+
+.location-zone {
+    width: 100%;
+    margin-top: 45px;
+}
+
+
+/* TÍTULO DE ZONA */
+
+.location-zone-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    max-width: 650px;
+
+    margin: 0 auto 32px;
+}
+
+
+.location-zone-title h3 {
+    margin: 0;
+
+    color: #0b2b24;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* LÍNEAS DORADAS */
+
+.location-zone-title span {
+    display: block;
+
+    width: 70px;
+    height: 1px;
+
+    background-color: #b9975b;
+}
+
+
+/* =========================================
+   OFICINA ZONA NORTE
+========================================= */
+
+.locations-grid-north {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .location-zone {
+        margin-top: 35px;
+    }
+
+    .location-zone-title {
+        gap: 12px;
+        padding: 0 20px;
+        margin-bottom: 25px;
+    }
+
+    .location-zone-title h3 {
+        font-size: 1.1rem;
+    }
+
+    .location-zone-title span {
+        width: 35px;
+    }
+
+    .locations-grid-north {
+        max-width: 100%;
+    }
+
+}
+
 /*TARJETAS HORARIOS*/
 
 .office-hours{
