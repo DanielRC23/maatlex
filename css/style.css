@@ -1884,6 +1884,65 @@ height:350px;
     margin-top: 0;
 }
 
+/* =========================================
+   ENCABEZADO SECCIÓN DE MAPAS
+========================================= */
+
+.maps-header {
+    width: calc(100% + 80px);
+    margin-left: -40px;
+
+    margin-top: 70px;
+    margin-bottom: 45px;
+
+    padding: 42px 30px;
+
+    text-align: center;
+
+    background: #0b2b24;
+}
+
+
+.maps-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #d5bc8c;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+.maps-header h3 {
+    margin: 0;
+
+    color: #fffdf8;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+.maps-header-line {
+    width: 55px;
+    height: 2px;
+
+    margin: 16px auto;
+
+    background: #b9975b;
+}
+
+
+.maps-header p {
+    margin: 0;
+
+    color: #e5ded1;
+
+    font-size: 0.95rem;
+}
 
 /* CELULAR */
 
@@ -1906,6 +1965,98 @@ height:350px;
         margin-bottom: 16px;
     }
 
+}
+
+.maps-header {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+
+    margin-top: 50px;
+    margin-bottom: 35px;
+
+    padding: 35px 20px;
+}
+
+.maps-header h3 {
+    font-size: 1.45rem;
+}
+
+.maps-header p {
+    font-size: 0.88rem;
+}
+
+.map-region-header {
+    padding: 0 5px;
+}
+
+.map-region-number {
+    width: 40px;
+    height: 40px;
+}
+
+.map-region-header h3 {
+    font-size: 1.05rem;
+}
+
+.map-region-header p {
+    font-size: 0.85rem;
+}
+
+/* ENCABEZADO DE CADA MAPA */
+
+.map-region-header {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    max-width: 1450px;
+    margin: 0 auto 18px;
+
+    padding-left: 5px;
+}
+
+
+.map-region-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #b9975b;
+    border-radius: 50%;
+
+    color: #b9975b;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+.map-region-header h3 {
+    margin: 0 0 3px;
+
+    color: #0b2b24;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    text-align: left;
+}
+
+
+.map-region-header p {
+    margin: 0;
+
+    color: #626860;
+
+    font-size: 0.9rem;
+
+    text-align: left;
 }
 
 /* =========================================
