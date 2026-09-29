@@ -788,13 +788,162 @@ line-height:1.7;
 
 }
 
-@media(min-width:900px){
+/* =========================================
+   ZONAS DEL EQUIPO
+========================================= */
 
-.team-grid{
+.team-zone {
+    width: 100%;
+    margin-top: 45px;
+}
 
-grid-template-columns:repeat(3,1fr);
+
+/* TÍTULO DE CADA ZONA */
+
+.team-zone-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    max-width: 650px;
+
+    margin: 0 auto 32px;
+}
+
+
+.team-zone-title h3 {
+    margin: 0;
+
+    color: #0b2b24;
+
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* LÍNEAS DORADAS */
+
+.team-zone-title span {
+    display: block;
+
+    width: 70px;
+    height: 1px;
+
+    background-color: #b9975b;
+}
+
+
+/* =========================================
+   ZONA NORTE
+   Centrar las dos tarjetas
+========================================= */
+
+.team-grid-north {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    width: calc((100% - 25px) * 2 / 3);
+    max-width: none;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   FOTO PROVISIONAL
+========================================= */
+
+.team-photo-placeholder {
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    background-color: #0b2b24;
+
+    border: 2px solid #b9975b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.team-photo-placeholder span {
+    color: #d5bc8c;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+/* CELULAR Y TABLET */
+@media (max-width: 768px) {
+
+    .team-zone {
+        margin-top: 35px;
+    }
+
+    .team-zone-title {
+        gap: 12px;
+        padding: 0 20px;
+        margin-bottom: 25px;
+    }
+
+    .team-zone-title h3 {
+        font-size: 1.1rem;
+    }
+
+    .team-zone-title span {
+        width: 35px;
+    }
+
+    /* En celular todas las tarjetas van una debajo de otra */
+    .team-grid-north {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
 }
+
+
+/* =========================================
+   COMPUTADORA
+========================================= */
+
+@media (min-width: 900px) {
+
+    /* Zona Centro: 3 tarjetas por fila */
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* Zona Norte: 2 tarjetas del mismo tamaño,
+       pero centradas */
+    .team-grid.team-grid-north {
+        grid-template-columns: repeat(2, 1fr);
+
+        width: calc((100% - 25px) * 2 / 3);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 }
 
