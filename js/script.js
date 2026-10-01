@@ -215,3 +215,56 @@ d="M5 13l4 4L19 7"/>
 installBtn.classList.add('installed');
 
 }
+
+
+/*
+PARA ABRIR IMAGENES.
+*/
+
+function openTeamPhoto(image) {
+
+    const lightbox = document.getElementById("team-lightbox");
+    const lightboxImage = document.getElementById("team-lightbox-image");
+    const lightboxName = document.getElementById("team-lightbox-name");
+
+    lightboxImage.src = image.dataset.full;
+    lightboxImage.alt = image.alt;
+
+    lightboxName.textContent = image.alt;
+
+    lightbox.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeTeamPhoto() {
+
+    const lightbox = document.getElementById("team-lightbox");
+
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+/* CERRAR AL HACER CLIC EN EL FONDO */
+
+document.getElementById("team-lightbox").addEventListener("click", function(event) {
+
+    if (event.target === this) {
+        closeTeamPhoto();
+    }
+
+});
+
+
+/* CERRAR CON ESC */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeTeamPhoto();
+    }
+
+});

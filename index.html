@@ -362,7 +362,7 @@ Atendemos diversas áreas del derecho para ofrecer soluciones integrales.
 
 </section>
 
-<!-- ***** -->
+<!-- **** -->
 
 
 
@@ -397,9 +397,13 @@ Atendemos diversas áreas del derecho para ofrecer soluciones integrales.
             <div class="team-card">
 
                 <img
-                    src="assets/team/licenciado1.jpg"
+                    src="assets/team/thumb/licenciado1.jpg"
+                    data-full="assets/team/full/licenciado1.jpg"
                     alt="Lic. José Alberto Chávez García"
-                    class="team-photo">
+                    class="team-photo"
+                    loading="lazy"
+                    decoding="async"
+                    onclick="openTeamPhoto(this)">
 
                 <h3>Lic. José Alberto Chávez García</h3>
 
@@ -409,9 +413,13 @@ Atendemos diversas áreas del derecho para ofrecer soluciones integrales.
             <div class="team-card">
 
                 <img
-                    src="assets/team/licenciado2.jpg"
+                    src="assets/team/thumb/licenciado2.jpg"
+                    data-full="assets/team/full/licenciado2.jpg"
                     alt="Lic. Mayra Lorena Vieyra Pérez"
-                    class="team-photo">
+                    class="team-photo"
+                    loading="lazy"
+                    decoding="async"
+                    onclick="openTeamPhoto(this)">
 
                 <h3>Lic. Mayra Lorena Vieyra Pérez</h3>
 
@@ -422,8 +430,12 @@ Atendemos diversas áreas del derecho para ofrecer soluciones integrales.
 
                 <img
                     src="assets/team/licenciado3.jpg"
+                    data-full="assets/team/full/licenciado3.jpg"
                     alt="Dr. Guillermo Martínez Ruiz"
-                    class="team-photo">
+                    class="team-photo"
+                    loading="lazy"
+                    decoding="async"
+                    onclick="openTeamPhoto(this)">
 
                 <h3>Dr. Guillermo Martínez Ruiz</h3>
 
@@ -434,8 +446,12 @@ Atendemos diversas áreas del derecho para ofrecer soluciones integrales.
 
                 <img
                     src="assets/team/licenciado4.jpg"
+                    data-full="assets/team/full/licenciado4.jpg"
                     alt="Lic. Lino Salvador Rangel Pardo"
-                    class="team-photo">
+                    class="team-photo"
+                    loading="lazy"
+                    decoding="async"
+                    onclick="openTeamPhoto(this)">
 
                 <h3>Lic. Lino Salvador Rangel Pardo</h3>
 
@@ -459,23 +475,27 @@ Atendemos diversas áreas del derecho para ofrecer soluciones integrales.
         </div>
 
 
-        <div class="team-grid team-grid-north">
 
-            <!-- LICENCIADO 5 -->
+
+        <div class="team-grid team-grid-north">
 
             <div class="team-card">
 
                 <img
                     src="assets/team/licenciado5.jpeg"
+                    data-full="assets/team/full/licenciado5.jpg"
                     alt="Lic. Jaquelin Rodríguez Ramírez"
-                    class="team-photo">
+                    class="team-photo"
+                    loading="lazy"
+                    decoding="async"
+                    onclick="openTeamPhoto(this)">
 
                 <h3>Lic. Jaquelin Rodríguez Ramírez</h3>
 
             </div>
 
 
-            <!-- LICENCIADO 6 -->
+
 
             <div class="team-card">
 
@@ -492,6 +512,26 @@ Atendemos diversas áreas del derecho para ofrecer soluciones integrales.
     </div>
 
 </section>
+
+<!-- LIGHTBOX FOTOS DEL EQUIPO -->
+
+<div id="team-lightbox" class="team-lightbox">
+
+    <button
+        class="team-lightbox-close"
+        onclick="closeTeamPhoto()"
+        aria-label="Cerrar imagen">
+        &times;
+    </button>
+
+    <img
+        id="team-lightbox-image"
+        src=""
+        alt="Fotografía del equipo MAAT LEX">
+
+    <p id="team-lightbox-name"></p>
+
+</div>
 
 
 <!-- RECURSOS -->
@@ -650,7 +690,7 @@ Solicitar Asesoría
 
             <div class="faq-answer">
                 <p>
-                    Puede contactarnos por WhatsApp, teléfono o correo electrónico para programar una cita.
+                    Puede contactarnos por WhatsApp, teléfono, nuestras redes sociales o correo electrónico para programar una cita.
                 </p>
             </div>
         </div>
@@ -864,7 +904,7 @@ Solicitar Asesoría
         <div class="map-container">
 
             <iframe
-                src="https://www.google.com/maps/d/embed?mid=1mg9hQ3oiQwqZ3TZus7io4BkY-GpUL8o&ehbc=2E312F&noprof=1" width="640" height="480">
+                src="https://www.google.com/maps/d/embed?mid=1mg9hQ3oiQwqZ3TZus7io4BkY-GpUL8o&ehbc=2E312F&noprof=1" width="640" height="480"
                 loading="lazy"
                 allowfullscreen>
             </iframe>
@@ -988,7 +1028,7 @@ Aviso de Privacidad
 
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 
 <div class="floating-socials" id="floatingSocials">
   <div class="social-options">
