@@ -327,6 +327,151 @@ box-shadow:0 10px 25px rgba(201,175,140,.2);
 
 }
 
+/* =========================================
+   BOTÓN MEMBRESÍA MAAT LEX
+========================================= */
+
+.membership-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 28px;
+    margin-top: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #b9975b 0%,
+        #e0c27f 45%,
+        #b9975b 100%
+    );
+
+    color: #0b2b24;
+    border: 1px solid #e2c985;
+    border-radius: 14px;
+
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    box-shadow:
+        0 0 0 rgba(185, 151, 91, 0),
+        0 8px 25px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+    animation: membershipPulse 2.5s infinite;
+}
+
+
+/* BRILLO QUE RECORRE EL BOTÓN */
+
+.membership-btn::before {
+    content: "";
+    position: absolute;
+
+    top: -50%;
+    left: -80%;
+
+    width: 45%;
+    height: 200%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.65),
+        transparent
+    );
+
+    transform: rotate(20deg);
+
+    animation: membershipShine 3.2s infinite;
+}
+
+
+/* HOVER */
+
+.membership-btn:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    background: linear-gradient(
+        135deg,
+        #c5a35f,
+        #f0d895,
+        #c5a35f
+    );
+
+    box-shadow:
+        0 0 25px rgba(213, 188, 140, 0.50),
+        0 12px 30px rgba(0, 0, 0, 0.30);
+}
+
+
+/* PULSO DORADO */
+
+@keyframes membershipPulse {
+
+    0%, 100% {
+        box-shadow:
+            0 0 0 0 rgba(185, 151, 91, 0.35),
+            0 8px 25px rgba(0, 0, 0, 0.22);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 9px rgba(185, 151, 91, 0),
+            0 0 24px rgba(213, 188, 140, 0.35),
+            0 8px 25px rgba(0, 0, 0, 0.22);
+    }
+}
+
+
+/* REFLEJO */
+
+@keyframes membershipShine {
+
+    0% {
+        left: -80%;
+    }
+
+    35%,
+    100% {
+        left: 140%;
+    }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .membership-btn {
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+
+}
+
+
+/* ACCESIBILIDAD: QUITAR ANIMACIÓN SI EL
+   USUARIO TIENE MOVIMIENTO REDUCIDO */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .membership-btn,
+    .membership-btn::before {
+        animation: none;
+    }
+
+}
+
 /* SECCIONES */
 
 .resources-section{

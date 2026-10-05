@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Membresía Jurídica | MAAT LEX</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+
+        /* =========================================
+           PÁGINA MEMBRESÍA
+        ========================================= */
+
+        body {
+            margin: 0;
+            background: #f6f1e7;
+            color: #0b2b24;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .membership-page {
+            min-height: 100vh;
+        }
+
+
+        /* HERO */
+
+        .membership-hero {
+            position: relative;
+            overflow: hidden;
+
+            padding: 75px 25px 110px;
+
+            text-align: center;
+            background: #123c33;
+            color: #fffdf8;
+        }
+
+        .membership-hero::after {
+            content: "";
+            position: absolute;
+
+            left: 50%;
+            bottom: -170px;
+
+            width: 120%;
+            height: 210px;
+
+            transform: translateX(-50%);
+
+            background: #f6f1e7;
+
+            border-radius: 50% 50% 0 0;
+        }
+
+
+        .membership-logo {
+            width: 150px;
+            max-width: 45vw;
+            margin-bottom: 30px;
+        }
+
+
+        .membership-eyebrow {
+            display: block;
+
+            margin-bottom: 15px;
+
+            color: #d5bc8c;
+
+            font-size: .8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+
+        .membership-hero h1 {
+            max-width: 850px;
+
+            margin: 0 auto 20px;
+
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.4rem, 5vw, 4.8rem);
+            font-weight: 400;
+            line-height: 1.05;
+        }
+
+
+        .membership-hero h1 span {
+            color: #d5bc8c;
+        }
+
+
+        .membership-hero-description {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: #eee7db;
+
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+
+        /* PRECIO */
+
+        .membership-price {
+            position: relative;
+            z-index: 2;
+
+            width: fit-content;
+
+            margin: -55px auto 70px;
+            padding: 18px 45px;
+
+            text-align: center;
+
+            background: #123c33;
+
+            border: 2px solid #b9975b;
+            border-radius: 15px;
+
+            color: white;
+
+            box-shadow: 0 15px 35px rgba(0,0,0,.18);
+        }
+
+
+        .membership-price-label {
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: #d5bc8c;
+
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+
+        .membership-price strong {
+            display: block;
+
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            line-height: 1;
+        }
+
+
+        .membership-price small {
+            font-size: 1rem;
+        }
+
+
+        /* CONTENIDO */
+
+        .membership-content {
+            max-width: 1150px;
+
+            margin: auto;
+            padding: 0 25px 90px;
+        }
+
+
+        .membership-title {
+            max-width: 700px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+        }
+
+
+        .membership-title h2 {
+            margin-bottom: 12px;
+
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.1rem;
+            font-weight: 400;
+        }
+
+
+        .membership-title p {
+            color: #626860;
+            line-height: 1.7;
+        }
+
+
+        /* BENEFICIOS */
+
+        .membership-benefits {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+
+            margin-bottom: 75px;
+        }
+
+
+        .membership-benefit {
+            padding: 35px 28px;
+
+            text-align: center;
+
+            background: #fffdf8;
+
+            border: 1px solid #d9ccb6;
+            border-radius: 15px;
+
+            box-shadow: 0 8px 25px rgba(11,43,36,.06);
+        }
+
+
+        .membership-benefit-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 20px;
+
+            border: 1px solid #b9975b;
+            border-radius: 50%;
+
+            color: #b9975b;
+
+            font-size: 1.6rem;
+        }
+
+
+        .membership-benefit h3 {
+            margin: 0 0 12px;
+
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+        }
+
+
+        .membership-benefit p {
+            margin: 0;
+
+            color: #626860;
+
+            line-height: 1.6;
+        }
+
+
+        /* ÁREAS INCLUIDAS */
+
+        .membership-areas {
+            padding: 50px;
+
+            background: #123c33;
+
+            border-radius: 20px;
+
+            color: #fffdf8;
+
+            text-align: center;
+        }
+
+
+        .membership-areas-label {
+            color: #d5bc8c;
+
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+        }
+
+
+        .membership-areas h2 {
+            margin: 12px 0;
+
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+
+        .membership-areas > p {
+            max-width: 650px;
+
+            margin: 0 auto 35px;
+
+            color: #e5ded1;
+
+            line-height: 1.7;
+        }
+
+
+        .areas-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+
+            max-width: 750px;
+
+            margin: auto;
+        }
+
+
+        .area-item {
+            padding: 20px;
+
+            background: rgba(255,255,255,.05);
+
+            border: 1px solid rgba(213,188,140,.45);
+            border-radius: 10px;
+        }
+
+
+        .area-item strong {
+            display: block;
+
+            color: #d5bc8c;
+
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+        }
+
+
+        /* AVISO */
+
+        .membership-notice {
+            max-width: 850px;
+
+            margin: 35px auto 0;
+            padding: 18px 25px;
+
+            background: #ede4d3;
+
+            border-left: 3px solid #b9975b;
+
+            color: #3e4943;
+
+            font-size: .92rem;
+            line-height: 1.6;
+        }
+
+
+        /* CTA */
+
+        .membership-cta {
+            padding: 80px 25px;
+
+            text-align: center;
+        }
+
+
+        .membership-cta h2 {
+            margin: 0 0 12px;
+
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+
+        .membership-cta p {
+            margin-bottom: 30px;
+
+            color: #626860;
+        }
+
+
+        .membership-contact-btn {
+            display: inline-block;
+
+            padding: 16px 32px;
+
+            background: linear-gradient(
+                135deg,
+                #b9975b,
+                #e0c27f,
+                #b9975b
+            );
+
+            border-radius: 10px;
+
+            color: #0b2b24;
+
+            font-weight: 700;
+            text-decoration: none;
+
+            transition: .25s ease;
+        }
+
+
+        .membership-contact-btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 10px 25px rgba(11,43,36,.2);
+        }
+
+
+        /* VOLVER */
+
+        .membership-back {
+            display: block;
+
+            margin-top: 22px;
+
+            color: #626860;
+
+            font-size: .9rem;
+            text-decoration: none;
+        }
+
+
+        .membership-back:hover {
+            color: #0b2b24;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            .membership-hero {
+                padding: 55px 20px 95px;
+            }
+
+            .membership-price {
+                padding: 16px 35px;
+                margin-bottom: 55px;
+            }
+
+            .membership-price strong {
+                font-size: 3rem;
+            }
+
+            .membership-benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .membership-areas {
+                padding: 40px 20px;
+            }
+
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<main class="membership-page">
+
+
+    <!-- HERO -->
+
+    <section class="membership-hero">
+
+        <img
+            src="../assets/logos/logo-navbar.png"
+            alt="MAAT LEX"
+            class="membership-logo">
+
+        <span class="membership-eyebrow">
+            MEMBRESÍA JURÍDICA
+        </span>
+
+        <h1>
+            Ten respaldo <span>antes de necesitarlo.</span>
+        </h1>
+
+        <p class="membership-hero-description">
+            Una membresía diseñada para brindarte orientación,
+            revisión de tu situación y acceso a servicios jurídicos
+            bajo condiciones preferenciales.
+        </p>
+
+    </section>
+
+
+    <!-- PRECIO -->
+
+    <div class="membership-price">
+
+        <span class="membership-price-label">
+            Membresía MAAT LEX
+        </span>
+
+        <strong>$300</strong>
+
+        <small>MXN mensuales</small>
+
+    </div>
+
+
+    <!-- BENEFICIOS -->
+
+    <section class="membership-content">
+
+        <div class="membership-title">
+
+            <h2>¿Qué incluye tu membresía?</h2>
+
+            <p>
+                Obtén respaldo jurídico para conocer tus opciones
+                y tomar decisiones con mayor información cuando
+                enfrentes una situación legal.
+            </p>
+
+        </div>
+
+
+        <div class="membership-benefits">
+
+
+            <article class="membership-benefit">
+
+                <div class="membership-benefit-icon">
+                    💬
+                </div>
+
+                <h3>Orientación jurídica</h3>
+
+                <p>
+                    Atención para conocer de manera inicial las
+                    alternativas disponibles ante tu situación.
+                </p>
+
+            </article>
+
+
+            <article class="membership-benefit">
+
+                <div class="membership-benefit-icon">
+                    📄
+                </div>
+
+                <h3>Revisión y análisis</h3>
+
+                <p>
+                    Revisión de tu situación y de la información
+                    relacionada con el asunto que deseas consultar.
+                </p>
+
+            </article>
+
+
+            <article class="membership-benefit">
+
+                <div class="membership-benefit-icon">
+                    ⚖
+                </div>
+
+                <h3>Condiciones preferenciales</h3>
+
+                <p>
+                    Acceso a representación legal bajo condiciones
+                    preferenciales cuando el asunto lo requiera.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- ÁREAS -->
+
+        <div class="membership-areas">
+
+            <span class="membership-areas-label">
+                COBERTURA DE LA MEMBRESÍA
+            </span>
+
+            <h2>
+                Áreas jurídicas incluidas
+            </h2>
+
+            <p>
+                La Membresía Jurídica MAAT LEX aplica exclusivamente
+                para asuntos relacionados con las siguientes áreas:
+            </p>
+
+
+            <div class="areas-grid">
+
+                <div class="area-item">
+                    <strong>Derecho Civil</strong>
+                </div>
+
+                <div class="area-item">
+                    <strong>Derecho Laboral</strong>
+                </div>
+
+                <div class="area-item">
+                    <strong>Derecho Familiar</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="membership-notice">
+            <strong>Importante:</strong>
+            La membresía aplica únicamente en las áreas Civil,
+            Laboral y Familiar. La representación legal, juicios,
+            trámites y demás servicios que generen honorarios o
+            gastos adicionales estarán sujetos a las condiciones
+            aplicables a cada asunto.
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="membership-cta">
+
+        <h2>Conoce todos los beneficios</h2>
+
+        <p>
+            Contáctanos para recibir información sobre la membresía,
+            sus condiciones y proceso de contratación.
+        </p>
+
+        <a
+            href="https://wa.me/524439356776?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20la%20Membresía%20Jurídica%20MAAT%20LEX."
+            class="membership-contact-btn"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Solicitar información por WhatsApp
+
+        </a>
+
+        <a href="../index.html" class="membership-back">
+            ← Volver a MAAT LEX
+        </a>
+
+    </section>
+
+
+</main>
+
+</body>
+</html>
