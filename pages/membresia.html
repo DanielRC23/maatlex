@@ -30,6 +30,51 @@
             min-height: 100vh;
         }
 
+        /*Boton Home*/
+
+        .back-home{
+
+position:fixed;
+
+top:25px;
+
+left:25px;
+
+z-index:1000;
+
+background:rgba(0,0,0,.4);
+
+border:1px solid rgba(201,175,140,.25);
+
+color:#C9AF8C;
+
+text-decoration:none;
+
+padding:12px 20px;
+
+border-radius:50px;
+
+backdrop-filter:blur(10px);
+
+transition:.3s;
+
+font-weight:600;
+
+}
+
+.back-home:hover{
+
+border-color:#C9AF8C;
+
+transform:translateY(-2px);
+
+}
+
+*{
+
+-webkit-tap-highlight-color: transparent;
+
+}
 
         /* HERO */
 
@@ -83,20 +128,21 @@
 
 
         .membership-hero h1 {
-            max-width: 850px;
+             max-width: 850px;
+    margin: 0 auto 20px;
 
-            margin: 0 auto 20px;
-
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.4rem, 5vw, 4.8rem);
-            font-weight: 400;
-            line-height: 1.05;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -0.5px;
         }
 
 
         .membership-hero h1 span {
-            color: #d5bc8c;
-        }
+    color: #d5bc8c;
+    font-weight: 600;
+}
 
 
         .membership-hero-description {
@@ -408,25 +454,6 @@
         }
 
 
-        /* VOLVER */
-
-        .membership-back {
-            display: block;
-
-            margin-top: 22px;
-
-            color: #626860;
-
-            font-size: .9rem;
-            text-decoration: none;
-        }
-
-
-        .membership-back:hover {
-            color: #0b2b24;
-        }
-
-
         /* RESPONSIVE */
 
         @media (max-width: 768px) {
@@ -466,6 +493,11 @@
 
 <main class="membership-page">
 
+<a href="../index.html" class="back-home">
+
+← Volver al inicio
+
+</a>
 
     <!-- HERO -->
 
@@ -647,10 +679,6 @@
 
             Solicitar información por WhatsApp
 
-        </a>
-
-        <a href="../index.html" class="membership-back">
-            ← Volver a MAAT LEX
         </a>
 
     </section>
